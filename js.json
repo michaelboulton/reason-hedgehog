@@ -1,0 +1,17 @@
+{
+  "source": "./esy.json",
+  "scripts": { "run": "esy '@js' x bash -c 'http-server #{self.bin}'" },
+  "override": {
+    "build": ["refmterr dune build --root . -j 3"],
+    "install": [
+      "esy-installer reasonml-hedgehog.install",
+      "esy-installer reasonml-hedgehog-js.install"
+    ],
+    "devDependencies": {
+      "http-server": "*"
+    },
+    "dependencies": {
+      "revery": "0.32.0"
+    }
+  }
+}

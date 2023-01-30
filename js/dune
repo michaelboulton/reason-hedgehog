@@ -1,0 +1,18 @@
+(executable
+   (package reasonml-hedgehog-js)
+   (name Entrypoint)
+   (public_name HedgehogJs)
+   (preprocess (pps js_of_ocaml-ppx))
+   (libraries reasonml-hedgehog.lib console.lib Revery )
+   (js_of_ocaml (flags
+      --pretty
+      ; --opt 3
+      --source-map
+   ))
+)
+
+(install
+   (section bin)
+   (package reasonml-hedgehog-js)
+   (files index.html Entrypoint.bc.js)
+   )

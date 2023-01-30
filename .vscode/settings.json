@@ -1,0 +1,10 @@
+{
+  "reason_language_server.build_system_override_by_root": {
+    "file:///home/michael/code/reasonml-hedgehog": "dune:esy",
+    // "file:///home/michael/code/reasonml-hedgehog": "bsb:4.0.7",
+  },
+  "ocaml.sandbox": {
+    "kind": "opam",
+    "switch": "4.10.1"
+  }
+}

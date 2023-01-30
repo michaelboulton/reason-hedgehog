@@ -1,0 +1,21 @@
+{
+  "name": "reasonml-hedgehog",
+  "refmt": 3,
+    "warnings": {
+      "number": "-44-102-32"
+    },
+  "sources": [
+    {
+      "dir": "library/"
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": []
+}

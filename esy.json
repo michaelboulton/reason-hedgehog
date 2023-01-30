@@ -1,0 +1,28 @@
+{
+  "name": "reasonml-hedgehog",
+  "version": "0.0.0",
+  "description": "My Project",
+  "esy": {
+    "build": "refmterr dune build -p reasonml-hedgehog -j 12",
+    "release": {
+      "bin": [ "ReasonmlHedgehogApp.exe" ],
+      "deleteFromBinaryRelease": [ "*esy_ocaml_*", "*refmterr-*", "ocaml-*" ]
+    }
+  },
+  "scripts": {
+    "build": "esy b",
+    "build:bucklescript": "bsb -make-world",
+    "test": "refmterr esy b dune runtest --force --no-buffer",
+    "dbg": "refmterr esy b dune build ./test/RunTests.bc"
+  },
+  "peerDependencies": { "ocaml": "4.14.1" },
+  "devDependencies": {
+    "bs-platform": "6.0.1",
+    "@opam/ppx_deriving": "^4.4.1",
+    "@esy-ocaml/reason": "*",
+    "@opam/merlin": "*",
+    "@reason-native/rely": "^3.2.1",
+    "@reason-native/console": "*",
+    "refmterr": "*"
+  }
+}
